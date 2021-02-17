@@ -5,6 +5,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { FontAwesome5,MaterialIcons } from '@expo/vector-icons';
 import AddTodo from './src/app/components/AddTodo'
 import ToDoList from './src/app/components/TodoList'
+import EditTodo from './src/app/components/EditTodo'
 
 
 const Tab = createBottomTabNavigator();
@@ -28,6 +29,10 @@ const ToDoListStackComponet = () => {
       <ToDoListStack.Screen
         name="タスクの一覧"
         component={ToDoList}
+      />
+      <AddToDoStack.Screen
+        name="タスクの編集"
+        component={EditTodo}
       />
     </ToDoListStack.Navigator>
   )
